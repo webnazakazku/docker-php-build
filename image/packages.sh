@@ -23,7 +23,6 @@ $minimal_apt_get_install \
 	php$1-intl \
 	php$1-json \
 	php$1-mbstring \
-	php$1-mcrypt \
 	php$1-mysql \
 	php$1-opcache \
 	php$1-pgsql \
@@ -34,6 +33,11 @@ $minimal_apt_get_install \
 	php$1-zip \
 	php-mongodb \
 	php-redis
+
+if [[ "$1" != 7.2 ]]; then
+	$minimal_apt_get_install \
+		php$1-mcrypt
+fi
 
 # Grunt and bower
 npm install -g grunt bower
