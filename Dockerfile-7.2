@@ -17,7 +17,7 @@ ENV PATH $PATH:~/.composer/vendor/bin
 
 RUN /build/prepare.sh && \
 	/build/system_services.sh && \
-	/build/packages.sh 7.2 && \
+	/build/packages-php72.sh && \
 	/build/cleanup.sh
 
 CMD ["/sbin/my_init"]
