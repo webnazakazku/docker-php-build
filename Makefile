@@ -1,9 +1,9 @@
 NAME = webnazakazku/php-build
-VERSION = 0.4.0
+VERSION = 0.5.0
 
-.PHONY: all php56 php70 php71 php72 tag_latest release
+.PHONY: all php56 php70 php71 php72 php73 tag_latest release
 
-all: php56 php70 php71 php72
+all: php56 php70 php71 php72 php73
 
 php56:
 	docker build -t $(NAME)-5.6:$(VERSION) --rm -f Dockerfile-5.6 .
@@ -17,6 +17,10 @@ php71:
 php72:
 	docker build -t $(NAME)-7.2:$(VERSION) --rm -f Dockerfile-7.2 .
 
+php73:
+	docker build -t $(NAME)-7.3:$(VERSION) --rm -f Dockerfile-7.3 .
+
+	
 tag_latest:
 	docker tag -f $(NAME):$(VERSION) $(NAME):latest
 

@@ -34,7 +34,7 @@ $minimal_apt_get_install \
 	php-mongodb \
 	php-redis
 
-if [[ "$1" != 7.2 ]]; then
+if [[ "$1" < 7.2 ]]; then
 	$minimal_apt_get_install \
 		php$1-mcrypt
 fi
