@@ -10,7 +10,7 @@ apt-get update
 
 ## Often used tools.
 $minimal_apt_get_install curl unzip git mysql-client postgresql-client \
-	redis-tools mongodb-clients nodejs nodejs-legacy npm
+	redis-tools mongodb-clients
 
 ## PHP packages
 $minimal_apt_get_install \
@@ -38,6 +38,18 @@ if [[ "$1" < 7.2 ]]; then
 	$minimal_apt_get_install \
 		php$1-mcrypt
 fi
+
+#Node.js
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+
+#Yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+
+apt-get update
+
+apt-get install -y yarn
 
 # Grunt and bower
 npm install -g grunt bower

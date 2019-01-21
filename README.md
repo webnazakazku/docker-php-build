@@ -15,6 +15,7 @@
 * nodejs
 * nodejs-legacy
 * npm
+* yarn
 
 ## PHP packages installed
 
