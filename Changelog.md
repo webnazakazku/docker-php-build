@@ -1,3 +1,6 @@
+## 0.6.0 (release date: 2019-11-29)
+ * Added PHP 7.4 build
+
 ## 0.5.0 (release date: 2018-12-09)
  * Added PHP 7.3 build
 
