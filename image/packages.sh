@@ -40,7 +40,7 @@ if [[ "$1" < 7.2 ]]; then
 fi
 
 #Node.js
-curl -sL https://deb.nodesource.com/setup_10.x | bash -
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
 
 #Yarn
