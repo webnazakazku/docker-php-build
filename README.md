@@ -72,3 +72,4 @@ You may want to set `/cache` dir as Docker image volume for faster CI build.
 * 7.1
 * 7.2
 * 7.3
+* 7.4
