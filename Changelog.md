@@ -1,3 +1,8 @@
+## 0.7.0 (release date: 2020-10-26)
+
+ * Updated `composer` to `2.0`
+ * Removed global package `hirak/prestissimo` incompatible with new Composer
+
 ## 0.6.0 (release date: 2019-11-29)
  * Added PHP 7.4 build
 

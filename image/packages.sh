@@ -62,7 +62,5 @@ mkdir /cache
 # NPM: cache
 npm config set cache /cache/npm
 
-# Composer speedup
-composer global require hirak/prestissimo:@stable
 composer global require jakub-onderka/php-parallel-lint:@stable
 composer global require nette/code-checker:~2.5.0

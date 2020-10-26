@@ -48,7 +48,6 @@
 ## Composer packages globally installed
 
 * [composer](https://getcomposer.org/) (of course)
-* [hirak/prestissimo](https://github.com/hirak/prestissimo) which speeds up composer install
 * [jakub-onderka/php-parallel-lint](https://github.com/JakubOnderka/PHP-Parallel-Lint) which tests PHP syntax in parallel
 * [nette/code-checker](https://github.com/nette/code-checker) which checks for coding style and template error in Nette framework
 
