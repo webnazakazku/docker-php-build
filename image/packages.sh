@@ -21,7 +21,6 @@ $minimal_apt_get_install \
 	php$1-gd \
 	php$1-imap \
 	php$1-intl \
-	php$1-json \
 	php$1-mbstring \
 	php$1-mysql \
 	php$1-opcache \
@@ -34,9 +33,16 @@ $minimal_apt_get_install \
 	php-mongodb \
 	php-redis
 
-if [[ "$1" < 7.2 ]]; then
-	$minimal_apt_get_install \
-		php$1-mcrypt
+PHP_VER=`echo $1 | sed -e 's/\.//g'`
+if [ "$PHP_VER" -le "71" ]; then
+	# <= 7.1
+	$minimal_apt_get_install php$1-mcrypt
+fi
+if [ "$PHP_VER" == "70" ]; then
+	$minimal_apt_get_install php$1-sodium
+fi
+if [ "$PHP_VER" == "71" ]; then
+	$minimal_apt_get_install php$1-sodium
 fi
 
 #Node.js
