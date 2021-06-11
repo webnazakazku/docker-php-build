@@ -28,7 +28,7 @@ dpkg-divert --local --rename --add /usr/bin/ischroot
 ln -sf /bin/true /usr/bin/ischroot
 
 ## Install HTTPS support for APT.
-$minimal_apt_get_install apt-transport-https ca-certificates
+$minimal_apt_get_install apt-transport-https ca-certificates gpg-agent
 
 ## Install add-apt-repository
 $minimal_apt_get_install software-properties-common

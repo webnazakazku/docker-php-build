@@ -1,3 +1,7 @@
+## 1.0.0 (release date:  2021-06-11)
+
+ * update to Ubuntu 20.04
+
 ## 0.7.0 (release date: 2020-10-26)
 
  * Updated `composer` to `2.0`

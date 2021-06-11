@@ -57,8 +57,8 @@ apt-get update
 
 apt-get install -y yarn
 
-# Grunt and bower
-npm install -g grunt bower
+# Grunt
+npm install -g grunt
 
 # Composer
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -68,5 +68,5 @@ mkdir /cache
 # NPM: cache
 npm config set cache /cache/npm
 
-composer global require jakub-onderka/php-parallel-lint:@stable
-composer global require nette/code-checker:~2.5.0
+composer global require php-parallel-lint/php-parallel-lint:@stable
+composer global require nette/code-checker:@stable
