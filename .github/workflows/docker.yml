@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    schedule:
-      - cron: "0 5 * * 1,3.5" # At 05:00 on Monday. Wednesday and Friday
+  schedule:
+    - cron: "0 5 * * 1,3,5" # At 05:00 on Monday. Wednesday and Friday
 
 jobs:
   docker:
