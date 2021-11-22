@@ -7,6 +7,7 @@ set -x
 LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 
 apt-get update
+apt-get dist-upgrade -y
 
 ## Often used tools.
 $minimal_apt_get_install curl unzip git mysql-client postgresql-client \
