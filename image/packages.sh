@@ -35,6 +35,10 @@ $minimal_apt_get_install \
 	php-redis
 
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
+if [ "$PHP_VER" -le "74" ]; then
+	# <= 7.4
+	$minimal_apt_get_install php$1-json
+fi
 if [ "$PHP_VER" -le "71" ]; then
 	# <= 7.1
 	$minimal_apt_get_install php$1-mcrypt
