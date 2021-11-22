@@ -31,8 +31,8 @@ $minimal_apt_get_install \
 	php$1-sqlite3 \
 	php$1-xml \
 	php$1-zip \
-	php-mongodb \
-	php-redis
+	php$1-mongodb \
+	php$1-redis
 
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
 if [ "$PHP_VER" -le "74" ]; then
@@ -74,3 +74,4 @@ composer global require php-parallel-lint/php-parallel-lint:@stable
 composer global require nette/code-checker:@stable
 
 php -v
+php -i

@@ -26,8 +26,8 @@ php74:
 php80:
 	docker build -t $(NAME):8.0 --rm -f Dockerfile-8.0 .
 
-php80:
-	docker build -t $(NAME):8.0 --rm -f Dockerfile-8.1 .
+php81:
+	docker build -t $(NAME):8.1 --rm -f Dockerfile-8.1 .
 
 tag_latest:
 	docker tag -f $(NAME):$(VERSION) $(NAME):latest
