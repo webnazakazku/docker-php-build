@@ -39,10 +39,7 @@ if [ "$PHP_VER" -le "71" ]; then
 	# <= 7.1
 	$minimal_apt_get_install php$1-mcrypt
 fi
-if [ "$PHP_VER" == "70" ]; then
-	$minimal_apt_get_install php$1-sodium
-fi
-if [ "$PHP_VER" == "71" ]; then
+if [ "$PHP_VER" >= "70" ]; then
 	$minimal_apt_get_install php$1-sodium
 fi
 
@@ -71,3 +68,5 @@ npm config set cache /cache/npm
 
 composer global require php-parallel-lint/php-parallel-lint:@stable
 composer global require nette/code-checker:@stable
+
+php -v

@@ -20,6 +20,7 @@ jobs:
           - version: "7.3"
           - version: "7.4"
           - version: "8.0"
+          - version: "8.1"
 
       fail-fast: false
 

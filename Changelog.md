@@ -1,4 +1,6 @@
-## 1.0.0 (release date:  2021-06-11)
+## 1.1.0 (release date: 2021-11-22)
+
+## 1.0.0 (release date: 2021-06-11)
 
  * update to Ubuntu 20.04
 
