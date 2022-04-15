@@ -1,3 +1,8 @@
+## 1.2.0 (release date: 2022-04-15)
+
+ * added PHP xdebug
+ * added bash-completion, make and nano
+
 ## 1.1.0 (release date: 2021-11-22)
 
 ## 1.0.0 (release date: 2021-06-11)

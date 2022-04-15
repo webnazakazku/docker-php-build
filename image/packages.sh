@@ -32,7 +32,8 @@ $minimal_apt_get_install \
 	php$1-xml \
 	php$1-zip \
 	php$1-mongodb \
-	php$1-redis
+	php$1-redis \
+	php$1-xdebug
 
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
 if [ "$PHP_VER" -le "74" ]; then
@@ -46,6 +47,9 @@ fi
 if [ "$PHP_VER" >= "70" ]; then
 	$minimal_apt_get_install php$1-sodium
 fi
+
+#Utils
+apt install -y bash-completion make nano
 
 #Node.js
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
