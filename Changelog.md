@@ -1,3 +1,7 @@
+## 1.3.0 (release date: 2022-12-13)
+
+* added PHP 8.2
+
 ## 1.2.0 (release date: 2022-04-15)
 
  * added PHP xdebug
