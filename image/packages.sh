@@ -11,7 +11,7 @@ apt-get dist-upgrade -y
 
 ## Often used tools.
 $minimal_apt_get_install curl unzip git mysql-client postgresql-client \
-	redis-tools mongodb-clients
+	redis-tools
 
 ## PHP packages
 $minimal_apt_get_install \
@@ -52,16 +52,26 @@ fi
 apt install -y bash-completion make nano
 
 #Node.js
-curl -sL https://deb.nodesource.com/setup_18.x | bash -
+curl -SLO https://deb.nodesource.com/nsolid_setup_deb.sh
+chmod 500 nsolid_setup_deb.sh
+./nsolid_setup_deb.sh 21
+rm nsolid_setup_deb.sh
 apt-get install -y nodejs
 
-#Yarn
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+#MongoDB client
+curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
+   gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
 apt-get update
 
-apt-get install -y yarn
+apt-get install -y mongodb-org-shell
+
+#Yarn
+corepack enable
+cd /root && yarn init -2
 
 # Grunt
 npm install -g grunt
@@ -78,4 +88,3 @@ composer global require php-parallel-lint/php-parallel-lint:@stable
 composer global require nette/code-checker:@stable
 
 php -v
-php -i
