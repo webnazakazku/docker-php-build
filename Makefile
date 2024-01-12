@@ -30,7 +30,10 @@ php81:
 	docker build -t $(NAME):8.1 --rm -f Dockerfile-8.1 .
 
 php82:
-	docker build -t $(NAME):8.1 --rm -f Dockerfile-8.2 .
+	docker build -t $(NAME):8.2 --rm -f Dockerfile-8.2 .
+
+php83:
+	docker build -t $(NAME):8.3 --rm -f Dockerfile-8.3 .
 
 tag_latest:
 	docker tag -f $(NAME):$(VERSION) $(NAME):latest
