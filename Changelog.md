@@ -1,9 +1,13 @@
+## 1.5.0 (rekease date: 2024-01-12)
+
+ * added PHP 8.4
+
 ## 1.4.0 (rekease date: 2024-01-12)
 
  * Ubntu 22.04 LTS
  * added PHP 8.3
  * fixed PHP 8.2
-
+ 
 ## 1.3.0 (release date: 2022-12-13)
 
  * added PHP 8.2
