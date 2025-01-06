@@ -1,9 +1,9 @@
 NAME = webnazakazku/php-build
 VERSION = 0.6.0
 
-.PHONY: all php56 php70 php71 php72 php73 pho74 php80 php81 php82 tag_latest release
+.PHONY: all php56 php70 php71 php72 php73 pho74 php80 php81 php82 php83 php84 tag_latest release
 
-all: php56 php70 php71 php72 php73 php80 php81 php82
+all: php56 php70 php71 php72 php73 php80 php81 php82 php83 php84
 
 php56:
 	docker build -t $(NAME)-5.6:$(VERSION) --rm -f Dockerfile-5.6 .

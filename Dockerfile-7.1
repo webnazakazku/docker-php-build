@@ -1,14 +1,14 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 MAINTAINER Petr Parolek
 
 ADD image /build
 
 # Configure Composer
-ENV COMPOSER_CACHE_DIR /cache/composer
-ENV COMPOSER_NO_INTERACTION 1
+ENV COMPOSER_CACHE_DIR=/cache/composer
+ENV COMPOSER_NO_INTERACTION=1
 
 # Composer: make global packages available for execution
-ENV PATH $PATH:~/.composer/vendor/bin
+ENV PATH=$PATH:~/.composer/vendor/bin
 
 RUN /build/prepare.sh && \
 	/build/system_services.sh && \
