@@ -54,7 +54,7 @@ apt install -y bash-completion make nano
 #Node.js
 curl -SLO https://deb.nodesource.com/nsolid_setup_deb.sh
 chmod 500 nsolid_setup_deb.sh
-./nsolid_setup_deb.sh 21
+./nsolid_setup_deb.sh 22
 rm nsolid_setup_deb.sh
 apt-get install -y nodejs
 
