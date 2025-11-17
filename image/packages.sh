@@ -85,6 +85,6 @@ mkdir /cache
 npm config set cache /cache/npm
 
 composer global require php-parallel-lint/php-parallel-lint:@stable
-composer global require nette/code-checker:@stable
+#composer global require nette/code-checker:@stable
 
 php -v
