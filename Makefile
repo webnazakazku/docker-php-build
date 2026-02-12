@@ -1,4 +1,4 @@
-NAME = webnazakazku/php-build
+NAME = webnazakazku/docker-php-build
 VERSION = 0.6.0
 
 .PHONY: all php56 php70 php71 php72 php73 pho74 php80 php81 php82 php83 php84 tag_latest release
@@ -37,6 +37,9 @@ php83:
 
 php84:
 	docker build -t $(NAME):8.4 --rm -f Dockerfile-8.4 .
+
+php85:
+	docker build -t $(NAME):8.5 --rm -f Dockerfile-8.5 .
 
 tag_latest:
 	docker tag -f $(NAME):$(VERSION) $(NAME):latest
